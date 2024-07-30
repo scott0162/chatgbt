@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Trading Bull</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Elite Trading Bull</h1>
+        <div id="auth-section">
+            <h2>Register</h2>
+            <input type="text" id="register-username" placeholder="Username">
+            <input type="password" id="register-password" placeholder="Password">
+            <button onclick="register()">Register</button>
+
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Username">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+        <div id="trade-section" style="display: none;">
+            <h2>Trade</h2>
+            <input type="text" id="trade-symbol" placeholder="Symbol">
+            <input type="number" id="trade-quantity" placeholder="Quantity">
+            <select id="trade-side">
+                <option value="BUY">Buy</option>
+                <option value="SELL">Sell</option>
+            </select>
+            <button onclick="trade()">Trade</button>
+
+            <h2>Get Price</h2>
+            <input type="text" id="price-symbol" placeholder="Symbol">
+            <button onclick="getPrice()">Get Price</button>
+            <p id="price-display"></p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
